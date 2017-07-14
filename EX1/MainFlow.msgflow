@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:ComIbmLabel.msgnode="ComIbmLabel.msgnode" xmlns:ComIbmMQInput.msgnode="ComIbmMQInput.msgnode" xmlns:ComIbmMQOutput.msgnode="ComIbmMQOutput.msgnode" xmlns:ComIbmRouteToLabel.msgnode="ComIbmRouteToLabel.msgnode" xmlns:ComIbmTrace.msgnode="ComIbmTrace.msgnode" xmlns:SYSTEM1.subflow="SYSTEM1.subflow" xmlns:SYSTEM2.subflow="SYSTEM2.subflow" xmlns:SYSTEM3.subflow="SYSTEM3.subflow" xmlns:Sys2Tester.subflow="Sys2Tester.subflow"
+    xmlns:Sys3Tester.subflow="Sys3Tester.subflow" xmlns:System1tester.subflow="System1tester.subflow" xmlns:TO_SYSTEM4.subflow="TO_SYSTEM4.subflow" xmlns:creditSubFlowTester.subflow="creditSubFlowTester.subflow" xmlns:debitSubFlow.subflow="debitSubFlow.subflow" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="MainFlow.msgflow"
+    nsPrefix="MainFlow.msgflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.timeDifference" name="timeDifference" defaultValueLiteral="10">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <translation xmi:type="utility:TranslatableString" key="MainFlow" bundleName="MainFlow" pluginId="EX1"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/EX1/icons/full/obj16/MainFlow.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/EX1/icons/full/obj30/MainFlow.gif"/>
+    <composition>
+      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="65,165" queueName="REQUEST" messageDomainProperty="XMLNSC" parserXmlnscProcessingInstructionsRetainMode="all">
+        <translation xmi:type="utility:ConstantString" string="Input_node"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="173,165" computeExpression="esql://routine/#MainFlow_Compute.Main" computeMode="destinationAndMessage">
+        <translation xmi:type="utility:ConstantString" string="Compute"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="458,129" labelName="L01">
+        <translation xmi:type="utility:ConstantString" string="L01"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="464,235" labelName="L02">
+        <translation xmi:type="utility:ConstantString" string="L02"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="467,346" labelName="L03">
+        <translation xmi:type="utility:ConstantString" string="L03"/>
+      </nodes>
+      <nodes xmi:type="ComIbmRouteToLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_11" location="272,166">
+        <translation xmi:type="utility:ConstantString" string="Route To Label"/>
+      </nodes>
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="471,462" labelName="L04">
+        <translation xmi:type="utility:ConstantString" string="L04"/>
+      </nodes>
+      <nodes xmi:type="debitSubFlow.subflow:FCMComposite_1" xmi:id="FCMComposite_1_18" location="637,431">
+        <translation xmi:type="utility:ConstantString" string="debitSys4Tester"/>
+      </nodes>
+      <nodes xmi:type="SYSTEM3.subflow:FCMComposite_1" xmi:id="FCMComposite_1_3" location="540,346">
+        <translation xmi:type="utility:ConstantString" string="TO_SYSTEM3"/>
+      </nodes>
+      <nodes xmi:type="SYSTEM1.subflow:FCMComposite_1" xmi:id="FCMComposite_1_8" location="540,129">
+        <translation xmi:type="utility:ConstantString" string="TO_SYSTEM1"/>
+      </nodes>
+      <nodes xmi:type="System1tester.subflow:FCMComposite_1" xmi:id="FCMComposite_1_9" location="643,130">
+        <translation xmi:type="utility:ConstantString" string="System1tester"/>
+      </nodes>
+      <nodes xmi:type="TO_SYSTEM4.subflow:FCMComposite_1" xmi:id="FCMComposite_1_12" location="537,462">
+        <translation xmi:type="utility:ConstantString" string="TO_SYSTEM4"/>
+      </nodes>
+      <nodes xmi:type="creditSubFlowTester.subflow:FCMComposite_1" xmi:id="FCMComposite_1_13" location="642,495">
+        <translation xmi:type="utility:ConstantString" string="creditSys4Tester"/>
+      </nodes>
+      <nodes xmi:type="Sys2Tester.subflow:FCMComposite_1" xmi:id="FCMComposite_1_15" location="651,234">
+        <translation xmi:type="utility:ConstantString" string="Sys2Tester"/>
+      </nodes>
+      <nodes xmi:type="Sys3Tester.subflow:FCMComposite_1" xmi:id="FCMComposite_1_16" location="651,343">
+        <translation xmi:type="utility:ConstantString" string="Sys3Tester"/>
+      </nodes>
+      <nodes xmi:type="SYSTEM2.subflow:FCMComposite_1" xmi:id="FCMComposite_1_17" location="539,235">
+        <translation xmi:type="utility:ConstantString" string="TO_SYSTEM2"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="113,43" destination="file" filePath="C:\IIB_studying\tests\Error-trace.txt" pattern="Trace at = ${CURRENT_TIMESTAMP} Root = ${Root}">
+        <translation xmi:type="utility:ConstantString" string="Trace"/>
+      </nodes>
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_19" location="283,71" queueName="ERROR">
+        <translation xmi:type="utility:ConstantString" string="MQ Output"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_7" targetNode="FCMComposite_1_11" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_8" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="FCMComposite_1_12" sourceNode="FCMComposite_1_7" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_6" targetNode="FCMComposite_1_17" sourceNode="FCMComposite_1_5" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_9" targetNode="FCMComposite_1_19" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out2" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer>
+      <propertyDescriptor groupName="Group.Basic" configurable="true" userDefined="true" describedAttribute="Property.timeDifference">
+        <propertyName xmi:type="utility:TranslatableString" key="Property.timeDifference" bundleName="MainFlow" pluginId="EX1"/>
+      </propertyDescriptor>
+    </propertyOrganizer>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>

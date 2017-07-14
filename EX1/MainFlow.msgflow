@@ -12,7 +12,7 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/EX1/icons/full/obj16/MainFlow.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/EX1/icons/full/obj30/MainFlow.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="65,165" queueName="REQUEST" messageDomainProperty="XMLNSC" parserXmlnscProcessingInstructionsRetainMode="all">
+      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="65,165" queueName="REQUEST" messageDomainProperty="XMLNSC" parserXmlnscProcessingInstructionsRetainMode="all" componentLevel="node" additionalInstances="3">
         <translation xmi:type="utility:ConstantString" string="Input_node"/>
       </nodes>
       <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="173,165" computeExpression="esql://routine/#MainFlow_Compute.Main" computeMode="destinationAndMessage">

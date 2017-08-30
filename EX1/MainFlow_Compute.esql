@@ -63,8 +63,8 @@ CREATE COMPUTE MODULE MainFlow_Compute
 		--SET OutputRoot.Properties = InputRoot.Properties;
 		--Set OutputRoot.MQMD = InputRoot.MQMD;
 		CALL CopyMessageHeaders();
-		SET OutputRoot.MQRFH2.usr.errorDescription = error;
-		SET OutputRoot.XMLNSC = InputRoot.XMLNSC;
+	--	SET OutputRoot.MQRFH2.usr.errorDescription = error;
+	--	SET OutputRoot.XMLNSC = InputRoot.XMLNSC;
 		PROPAGATE TO terminal 'out2';
 	END;
 	
